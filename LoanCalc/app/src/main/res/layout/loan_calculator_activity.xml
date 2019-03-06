@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoanCalculatorActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        tools:ignore="MissingConstraints">
+        <!-- Row 1 Item Price !-->
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Enter your loan amount" />
+
+        <EditText
+            android:id="@+id/loanAmount"
+            android:layout_width="165dp"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:textColor="#808080"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="MissingConstraints">
+        <!-- Row 2 Quantity !-->
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Enter your APR (%)"
+            />
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:id="@+id/enterAPR"
+            android:layout_marginRight="15dp"
+            android:textSize="15dp"
+            android:textColor="#808080"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        tools:ignore="MissingConstraints">
+        <!-- Row 3 Subtotal -->
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Enter your loan term (years)"
+            />
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:id="@+id/loanTerm"
+            android:layout_marginRight="15dp"
+            android:textColor="#808080"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="MissingConstraints">
+        <!-- Row 4 Tax percentage !-->
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/loanTextView"
+            android:text="Your loan payment"
+            android:textColor="#dcdcdc"
+            />
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:id="@+id/loanPayment"
+            android:layout_marginRight="15dp"
+            android:textSize="15dp"
+            android:textColor="#808080"
+            android:focusable="false"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="MissingConstraints">
+        <!-- Row 5 Total price-->
+        <TextView
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/interestTextView"
+            android:text="Over the period of the loan interest paid "
+            android:textColor="#dcdcdc"
+            />
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:id="@+id/interestPaid"
+            android:focusable="false"
+            android:textSize="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#808080"
+            android:text=""
+            />
+    </LinearLayout>
+    <!-- Row 6 contains the compute Button -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".5"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="calculate"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/calculateButton"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".5"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset"
+            android:enabled="false"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/main_resetButton"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".5"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Authorization table"
+            android:enabled="false"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/main_showTableButton"
+
+            />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
